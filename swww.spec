@@ -8,9 +8,11 @@ Source0:	%{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 Summary:	A Solution to your Wayland Wallpaper Woes
 License:	GPL-3.0
 Group:		Wayland/Utils
+
 BuildRequires:	cargo
 BuildRequires: scdoc
 BuildRequires: pkgconfig(liblz4)
+BuildRequires: git
 
 
 %description
