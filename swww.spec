@@ -14,8 +14,11 @@ BuildRequires: cargo-rpm-macros
 
 %description
 %summary
+
 %prep
 %autosetup -p1
+cargo vendor
+%cargo_prep -v vendor
 
 %build
 cargo build --release
