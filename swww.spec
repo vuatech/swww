@@ -18,9 +18,11 @@ BuildRequires: pkgconfig(liblz4)
 
 %prep
 %autosetup -p1
+cargo vendor
+%cargo_prep -v vendor
 
 %build
-cargo build --release
+cargo build --locked --profile rpm
 ./doc/gen.sh
 
 %install
